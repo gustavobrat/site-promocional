@@ -9,6 +9,11 @@ body {
     overflow-x: hidden;
 }
 
+/* Classe utilitária para centralizar */
+.centered-text {
+    text-align: center;
+}
+
 .announcement-bar {
     background: black;
     color: var(--brat-green);
@@ -25,7 +30,6 @@ body {
     display: flex;
 }
 
-/* CHARLI MAIOR NA LATERAL */
 .charli-sidebar {
     width: 45%;
     position: sticky;
@@ -38,11 +42,11 @@ body {
 }
 
 .charli-png {
-    height: 120%; /* Aumentei para ela transbordar um pouco e ficar imponente */
+    height: 130%; /* Bem grande como você pediu */
     width: auto;
     object-fit: contain;
     filter: drop-shadow(15px 15px 0px rgba(0,0,0,0.1));
-    margin-bottom: -50px; /* Faz ela "sair" um pouco da base */
+    margin-bottom: -80px;
 }
 
 .content-area {
@@ -62,7 +66,7 @@ body {
 .hero-card {
     background: black;
     color: var(--brat-green);
-    padding: 25px;
+    padding: 30px;
     margin: 40px 0;
 }
 
@@ -70,24 +74,19 @@ body {
     font-style: italic;
     font-size: 1.2rem;
     margin-bottom: 15px;
+    display: block; /* Garante que ocupe a linha toda para centralizar */
 }
 
-/* ESTILO DO LINK DE VÍDEO */
 .video-link-container {
     border-top: 1px dashed var(--brat-green);
     padding-top: 10px;
+    margin-top: 10px;
 }
 
 .video-link {
     color: white;
     text-decoration: underline;
     font-weight: bold;
-    font-size: 0.9rem;
-    cursor: pointer;
-}
-
-.video-link:hover {
-    color: var(--brat-green);
 }
 
 .product-card {
@@ -95,7 +94,8 @@ body {
     padding: 30px;
     border: 3px solid black;
     position: relative;
-    text-align: center;
+    display: inline-block; /* Mantém a borda justa à imagem */
+    width: 90%;
 }
 
 .pan-img {
@@ -124,6 +124,7 @@ body {
     height: 15px;
     background: #00000022;
     border: 1px solid black;
+    margin: 10px 0;
 }
 
 .progress-fill {
@@ -148,19 +149,24 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    margin-top: 20px;
+    margin: 20px auto;
+    max-width: 400px;
 }
 
 .grid-item {
     border: 2px solid black;
     padding: 15px;
     font-weight: bold;
-    text-align: center;
 }
 
 .footer-brat {
     margin-top: 100px;
-    padding: 40px 0;
+    padding-bottom: 50px;
     opacity: 0.6;
-    font-size: 0.8rem;
+}
+
+@media (max-width: 800px) {
+    .main-layout { flex-direction: column; }
+    .charli-sidebar { width: 100%; height: 400px; position: relative; }
+    .content-area { width: 100%; border-left: none; }
 }
