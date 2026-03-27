@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,13 +15,13 @@
 
     <div class="main-layout">
         
-        <!-- LATERAL ESQUERDA: A CHARLI -->
+        <!-- LATERAL ESQUERDA: A CHARLI (FIXA) -->
         <aside class="charli-sidebar">
-            <!-- Substitua pelo link do seu PNG transparente -->
-            <img src="https://pinimg.com" alt="Charli XCX" class="1000000668-removebg-preview.png">
+            <!-- Certifique-se que o nome do arquivo está igual ao da pasta -->
+            <img src="1000000668-removebg-preview.png" alt="Charli XCX" class="charli-png">
         </aside>
 
-        <!-- CONTEÚDO PRINCIPAL (ROLA PARA BAIXO) -->
+        <!-- CONTEÚDO PRINCIPAL (COM SCROLL) -->
         <article class="content-area">
             <header>
                 <h1 class="logo">brat</h1>
@@ -35,7 +36,8 @@
 
             <section class="product-showcase">
                 <div class="product-card">
-                    <img src="https://lecreuset.com.br" alt="Panela Verde" class="pan-img">
+                    <!-- Ajuste o nome "panela.png" para o nome do seu arquivo da panela -->
+                    <img src="panela.png" alt="Panela Verde" class="pan-img">
                     <div class="badge">FREE GIFT</div>
                 </div>
                 
@@ -47,7 +49,7 @@
                 <button class="claim-btn">CLAIM MY 360 SET xcx</button>
             </section>
 
-            <!-- SEÇÃO LONGA PARA GERAR SCROLL -->
+            <!-- SEÇÃO DE DETALHES PARA DAR SCROLL -->
             <section class="details">
                 <h2>why are we doing this?</h2>
                 <p>everything is romantic. even a cooking error. we want every brat girl to have a kitchen that looks like a rave. it’s so julia.</p>
@@ -59,12 +61,25 @@
                 </div>
             </section>
 
+            <!-- FAQ PARA FICAR MAIS LONGO -->
+            <section class="faq">
+                <h3>frequently asked:</h3>
+                <div class="faq-item">
+                    <p><strong>is this a scam?</strong></p>
+                    <p>no it's just club classics. just pay the $9.99 shipping fee xcx.</p>
+                </div>
+                <div class="faq-item">
+                    <p><strong>can i cook apples in it?</strong></p>
+                    <p>apple, onion, whatever you're bumping that to.</p>
+                </div>
+            </section>
+
             <section class="reviews">
                 <h3>fan proof:</h3>
                 <div class="review-item">"i'm bumping that in my kitchen now" - @brat_fan_99</div>
                 <div class="review-item">"the green is literally perfect" - @club_classics</div>
                 <div class="review-item">"arrived in 2 days in London!" - @xcx_updates</div>
-                <!-- Adicione quantos reviews quiser para ficar bem longo -->
+                <div class="review-item">"finally a pot that matches my vibe" - @360_cook</div>
             </section>
 
             <footer class="footer-brat">
@@ -74,6 +89,7 @@
     </div>
 
     <script>
+        // Simulador de estoque diminuindo
         let count = 2947;
         setInterval(() => {
             if(count > 7) {
@@ -85,4 +101,3 @@
     </script>
 </body>
 </html>
-
