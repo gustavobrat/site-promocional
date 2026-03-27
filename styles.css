@@ -1,0 +1,119 @@
+:root {
+    --brat-green: #8ACE00;
+    --dark-text: #000000;
+}
+
+body {
+    margin: 0;
+    background-color: var(--brat-green);
+    font-family: Arial, sans-serif;
+    color: var(--dark-text);
+}
+
+.announcement-bar {
+    background: black;
+    color: var(--brat-green);
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.promo-page {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 80px;
+    margin: 10px 0;
+    letter-spacing: -4px;
+    transform: scaleY(0.85);
+}
+
+.subtitle {
+    margin-top: -20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.copy-card {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid black;
+    padding: 15px;
+    font-style: italic;
+    margin: 20px 0;
+    line-height: 1.4;
+}
+
+.image-wrapper {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.product-img {
+    width: 100%;
+    filter: hue-rotate(45deg); /* Força a panela a ficar mais verde se a foto original for amarela/azul */
+}
+
+.price-tag {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: black;
+    color: white;
+    padding: 10px;
+}
+
+.old-price { text-decoration: line-through; color: #ff4444; font-size: 0.8rem; }
+.new-price { display: block; font-size: 1.5rem; font-weight: bold; color: var(--brat-green); }
+
+.inventory {
+    margin: 20px 0;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #00000033;
+    margin-bottom: 5px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: black;
+    width: 98%;
+    transition: width 1s;
+}
+
+.cta-button {
+    width: 100%;
+    background: black;
+    color: white;
+    border: none;
+    padding: 25px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.reviews {
+    border-top: 1px solid black;
+    padding-top: 20px;
+    text-align: left;
+}
+
+.review {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    border-bottom: 0.5px solid rgba(0,0,0,0.1);
+    padding-bottom: 5px;
+}
