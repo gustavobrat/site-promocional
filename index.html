@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRAT x LE CREUSET - FREE GIFT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra de Urgência -->
+    <div class="announcement-bar">
+        LIMITED QUANTITY: 3000 SETS LEFT FOR FANS ONLY xcx
+    </div>
+
+    <main class="promo-page">
+        <!-- Header com Logo Estilizado -->
+        <header>
+            <h1 class="logo">brat</h1>
+            <p class="subtitle">le creuset giveaway</p>
+        </header>
+
+        <!-- Seção da Copypasta (O Gancho) -->
+        <section class="hero-section">
+            <div class="copy-card">
+                <p>"hey yall charli xcx here. due to a packaging error we can't sell 3000 le creuset cookware sets so i'm giving them away to my loyal fans for free."</p>
+            </div>
+        </section>
+
+        <!-- Produto e Checkout Rápido -->
+        <section class="product-area">
+            <div class="image-wrapper">
+                <img src="https://lecreuset.com.br" alt="Panela Verde" class="product-img">
+                <div class="price-tag">
+                    <span class="old-price">R$ 2.499,00</span>
+                    <span class="new-price">R$ 0,00</span>
+                </div>
+            </div>
+
+            <div class="inventory">
+                <div class="progress-bar"><div class="progress-fill" id="bar"></div></div>
+                <p><span id="count">2947</span> sets remaining</p>
+            </div>
+
+            <button class="cta-button" onclick="alert('Redirecting to shipping...')">CLAIM MINE NOW</button>
+        </section>
+
+        <!-- Prova Social (Comentários "reais") -->
+        <section class="reviews">
+            <h3>what fans are saying:</h3>
+            <div class="review">"it's so julia. mine arrived today!" - @360girl</div>
+            <div class="review">"perfect for my apple-themed kitchen" - @vroomvroom</div>
+        </section>
+    </main>
+
+    <script>
+        // Simulador de estoque diminuindo
+        let count = 2947;
+        setInterval(() => {
+            if(count > 12) {
+                count -= Math.floor(Math.random() * 3);
+                document.getElementById('count').innerText = count;
+                document.getElementById('bar').style.width = (count / 3000 * 100) + "%";
+            }
+        }, 3000);
+    </script>
+</body>
+</html>
