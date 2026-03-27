@@ -5,31 +5,30 @@
 body {
     margin: 0;
     background-color: var(--brat-green);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
 
 .announcement-bar {
     background: black;
     color: var(--brat-green);
-    padding: 10px;
+    padding: 12px;
     text-align: center;
     font-weight: bold;
+    font-size: 0.8rem;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
-/* LAYOUT EM DUAS COLUNAS */
 .main-layout {
     display: flex;
-    min-height: 200vh; /* Força o scroll longo */
 }
 
-/* LATERAL COM A CHARLI */
+/* CHARLI MAIOR NA LATERAL */
 .charli-sidebar {
-    width: 40%;
-    position: sticky; /* Ela "trava" na tela enquanto você rola */
+    width: 45%;
+    position: sticky;
     top: 50px;
     height: calc(100vh - 50px);
     display: flex;
@@ -39,101 +38,129 @@ body {
 }
 
 .charli-png {
-    height: 90%; /* Ajuste o tamanho dela aqui */
+    height: 120%; /* Aumentei para ela transbordar um pouco e ficar imponente */
+    width: auto;
     object-fit: contain;
-    filter: drop-shadow(10px 10px 0px rgba(0,0,0,0.1));
+    filter: drop-shadow(15px 15px 0px rgba(0,0,0,0.1));
+    margin-bottom: -50px; /* Faz ela "sair" um pouco da base */
 }
 
-/* CONTEÚDO QUE ROLA */
 .content-area {
-    width: 60%;
-    padding: 50px;
-    background: rgba(255, 255, 255, 0.1); /* Efeito de profundidade */
-    border-left: 2px solid black;
+    width: 55%;
+    padding: 60px 40px;
+    border-left: 3px solid black;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .logo {
-    font-size: clamp(60px, 10vw, 120px);
+    font-size: 100px;
     letter-spacing: -6px;
     margin: 0;
-    transform: scaleY(0.9);
+    transform: scaleY(0.85);
 }
 
 .hero-card {
     background: black;
     color: var(--brat-green);
-    padding: 30px;
+    padding: 25px;
     margin: 40px 0;
+}
+
+.copypasta {
     font-style: italic;
     font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* ESTILO DO LINK DE VÍDEO */
+.video-link-container {
+    border-top: 1px dashed var(--brat-green);
+    padding-top: 10px;
+}
+
+.video-link {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.video-link:hover {
+    color: var(--brat-green);
 }
 
 .product-card {
     background: white;
-    padding: 20px;
+    padding: 30px;
     border: 3px solid black;
     position: relative;
+    text-align: center;
 }
 
 .pan-img {
     width: 100%;
-    filter: hue-rotate(50deg) saturate(1.5);
+    max-width: 400px;
 }
 
 .badge {
     position: absolute;
-    top: -15px;
-    right: -15px;
-    background: red;
+    top: -10px;
+    right: -10px;
+    background: #ff0000;
     color: white;
-    padding: 10px;
+    padding: 10px 15px;
     font-weight: bold;
-    transform: rotate(10deg);
+    transform: rotate(12deg);
+}
+
+.inventory-box {
+    margin: 30px 0;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 15px;
+    background: #00000022;
+    border: 1px solid black;
+}
+
+.progress-fill {
+    height: 100%;
+    background: black;
+    width: 98%;
+    transition: width 1.5s ease-in-out;
 }
 
 .claim-btn {
     width: 100%;
-    padding: 30px;
     background: black;
     color: white;
+    padding: 25px;
     font-size: 1.5rem;
     font-weight: 900;
     border: none;
-    margin-top: 20px;
     cursor: pointer;
-    transition: 0.1s;
 }
 
-.claim-btn:hover {
-    background: white;
-    color: black;
-    outline: 4px solid black;
-}
-
-/* SEÇÕES EXTRAS PARA DAR CORPO */
-.details { margin-top: 100px; text-align: left; }
 .fake-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin-top: 20px;
 }
+
 .grid-item {
-    border: 1px solid black;
-    padding: 20px;
+    border: 2px solid black;
+    padding: 15px;
     font-weight: bold;
+    text-align: center;
 }
 
-.reviews { margin-top: 100px; padding-bottom: 200px; }
-.review-item {
-    padding: 15px 0;
-    border-bottom: 1px solid black;
-    text-transform: lowercase;
-}
-
-/* Responsividade básica para mobile */
-@media (max-width: 768px) {
-    .main-layout { flex-direction: column; }
-    .charli-sidebar { width: 100%; height: 300px; position: relative; }
-    .content-area { width: 100%; padding: 20px; box-sizing: border-box; }
+.footer-brat {
+    margin-top: 100px;
+    padding: 40px 0;
+    opacity: 0.6;
+    font-size: 0.8rem;
 }
