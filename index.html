@@ -8,61 +8,81 @@
 </head>
 <body>
 
-    <!-- Barra de Urgência -->
     <div class="announcement-bar">
-        LIMITED QUANTITY: 3000 SETS LEFT FOR FANS ONLY xcx
+        LIMITED QUANTITY: 3000 SETS LEFT FOR FANS ONLY xcx — CLAIM NOW — 3000 SETS LEFT — 
     </div>
 
-    <main class="promo-page">
-        <!-- Header com Logo Estilizado -->
-        <header>
-            <h1 class="logo">brat</h1>
-            <p class="subtitle">le creuset giveaway</p>
-        </header>
+    <div class="main-layout">
+        
+        <!-- LATERAL ESQUERDA: A CHARLI -->
+        <aside class="charli-sidebar">
+            <!-- Substitua pelo link do seu PNG transparente -->
+            <img src="https://pinimg.com" alt="Charli XCX" class="charli-png">
+        </aside>
 
-        <!-- Seção da Copypasta (O Gancho) -->
-        <section class="hero-section">
-            <div class="copy-card">
-                <p>"hey yall charli xcx here. due to a packaging error we can't sell 3000 le creuset cookware sets so i'm giving them away to my loyal fans for free."</p>
-            </div>
-        </section>
+        <!-- CONTEÚDO PRINCIPAL (ROLA PARA BAIXO) -->
+        <article class="content-area">
+            <header>
+                <h1 class="logo">brat</h1>
+                <p class="subtitle">exclusive le creuset giveaway</p>
+            </header>
 
-        <!-- Produto e Checkout Rápido -->
-        <section class="product-area">
-            <div class="image-wrapper">
-                <img src="https://lecreuset.com.br" alt="Panela Verde" class="product-img">
-                <div class="price-tag">
-                    <span class="old-price">R$ 2.499,00</span>
-                    <span class="new-price">R$ 0,00</span>
+            <section class="hero-card">
+                <p class="copypasta">
+                    "hey yall charli xcx here. due to a packaging error we can't sell 3000 le creuset cookware sets so i'm giving them away to my loyal fans for free."
+                </p>
+            </section>
+
+            <section class="product-showcase">
+                <div class="product-card">
+                    <img src="https://lecreuset.com.br" alt="Panela Verde" class="pan-img">
+                    <div class="badge">FREE GIFT</div>
                 </div>
-            </div>
+                
+                <div class="inventory-box">
+                    <p>Current Stock: <span id="count">2947</span>/3000</p>
+                    <div class="progress-bar"><div class="progress-fill" id="bar"></div></div>
+                </div>
 
-            <div class="inventory">
-                <div class="progress-bar"><div class="progress-fill" id="bar"></div></div>
-                <p><span id="count">2947</span> sets remaining</p>
-            </div>
+                <button class="claim-btn">CLAIM MY 360 SET xcx</button>
+            </section>
 
-            <button class="cta-button" onclick="alert('Redirecting to shipping...')">CLAIM MINE NOW</button>
-        </section>
+            <!-- SEÇÃO LONGA PARA GERAR SCROLL -->
+            <section class="details">
+                <h2>why are we doing this?</h2>
+                <p>everything is romantic. even a cooking error. we want every brat girl to have a kitchen that looks like a rave. it’s so julia.</p>
+                
+                <div class="fake-grid">
+                    <div class="grid-item">STAIN RESISTANT</div>
+                    <div class="grid-item">DISHWASHER SAFE</div>
+                    <div class="grid-item">VROOM VROOM PROOF</div>
+                </div>
+            </section>
 
-        <!-- Prova Social (Comentários "reais") -->
-        <section class="reviews">
-            <h3>what fans are saying:</h3>
-            <div class="review">"it's so julia. mine arrived today!" - @360girl</div>
-            <div class="review">"perfect for my apple-themed kitchen" - @vroomvroom</div>
-        </section>
-    </main>
+            <section class="reviews">
+                <h3>fan proof:</h3>
+                <div class="review-item">"i'm bumping that in my kitchen now" - @brat_fan_99</div>
+                <div class="review-item">"the green is literally perfect" - @club_classics</div>
+                <div class="review-item">"arrived in 2 days in London!" - @xcx_updates</div>
+                <!-- Adicione quantos reviews quiser para ficar bem longo -->
+            </section>
+
+            <footer class="footer-brat">
+                <p>© 2024 BRAT KITCHEN - NOT A SCAM (PROBABLY)</p>
+            </footer>
+        </article>
+    </div>
 
     <script>
-        // Simulador de estoque diminuindo
         let count = 2947;
         setInterval(() => {
-            if(count > 12) {
-                count -= Math.floor(Math.random() * 3);
+            if(count > 7) {
+                count -= Math.floor(Math.random() * 2);
                 document.getElementById('count').innerText = count;
                 document.getElementById('bar').style.width = (count / 3000 * 100) + "%";
             }
-        }, 3000);
+        }, 4000);
     </script>
 </body>
 </html>
+
